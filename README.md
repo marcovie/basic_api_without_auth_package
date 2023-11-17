@@ -30,20 +30,24 @@ composer.json -> added autoload helper function
 
 ## Steps to use the api from Testing to Postman
 ```bash
-Step 1 - git clone https://github.com/marcovie/laravel_10_basic_api_without_auth_package
+Step 1 - git clone https://github.com/marcovie/laravel_10_basic_api_without_auth_package.git
 ```
-[https://github.com/marcovie/laravel_10_basic_api_without_auth_package](https://github.com/marcovie/laravel_10_basic_api_without_auth_package)
+[https://github.com/marcovie/laravel_10_basic_api_without_auth_package.git](https://github.com/marcovie/laravel_10_basic_api_without_auth_package.git)
 ```bash
-Step 2 - composer install
+Step 2 - "composer install"
 
-Step 3 - Make copy of the .env.example file and change the copy name to .env,
-open file and change settings required.
+Step 3 - Make copy of the ".env.example" file and change the copy name to .env open 
+file and change settings required.
 
-Step 4 Update in .env file the APP_DEV_EMAIL and APP_QUOTE_REQUEST_COUNT. APP_DEV_EMAIL is email address where errors will be sent. APP_QUOTE_REQUEST_COUNT is quote limit.
+Step 4 - Update in .env file the "APP_DEV_EMAIL" and "APP_QUOTE_REQUEST_COUNT". "APP_DEV_EMAIL" 
+is email address where errors will be sent. "APP_QUOTE_REQUEST_COUNT" is quote limit.
 
-Step 5 For full experience if Critical errors occur create account on [https://mailtrap.io/](https://mailtrap.io/) and put username and password into .env file but not required as shouldt have Critical but it is there for real system etc..
+Step 5 - For full experience if Critical errors occur create account on "https://mailtrap.io/" 
+and put username and password into .env file but not required as shouldt have Critical but it 
+is there for real system etc..
 
-Step 6 Make DB in your and take name of DB put in .env file at DB_DATABASE make sure to update username password that is related to you connections string
+Step 6 - Create DB in your mysql/mariadb and take name of DB put into .env file at the 
+variable DB_DATABASE make sure to update username password that is related to you connections string
 
 Step 7 - In command prompt in the root of the laravel project. Run this commands below:
 
@@ -53,16 +57,20 @@ Step 9 - php artisan migrate
 
 Step 10 - composer dump-autoload
 
-Step 11 - To create a user I just create basic seed file for test purpose. Please run php artisan db:seed --class=UsersTableSeeder to create user and email => user@email.com, password => password. Password is encrypted in DB. Other 
-ways would be create register function or admin system where we would create a user for client that accessing our API. 
+Step 11 - To create a user I just create basic seed file for test purpose. Please run 
+"php artisan db:seed --class=UsersTableSeeder" to create user and "email => user@email.com, 
+password => password". Password is encrypted in DB. Other ways would be create register 
+function or admin system where we would create a user for client that accessing our API. 
 
-Step 12 - php artisan serve - Which should give you url -> http://127.0.0.1:8000
+Step 12 - php artisan serve - Which should give you url -> "http://127.0.0.1:8000"
 
-Step 13 - You can use file marco_postman requests.postman_collection.json in root to import into Postman. Remember this must be run once to get basic user in DB run php artisan db:seed --class=UsersTableSeeder. Then can use Postman
+Step 13 - You can use file "marco_postman requests.postman_collection.json" in root to import 
+into Postman. Remember this must be run once to get basic user in DB run 
+php artisan db:seed --class=UsersTableSeeder. Then can use Postman
 
-Step 14 - To run tests go to command prompt run: php artisan test to get tests to run. 
+Step 14 - To run tests go to command prompt run: "php artisan test" to get tests to run. 
 
-Step 15 - In Postman can call these URL if php artisan serve running and IP/address is same. Please see steps below
+Step 15 - In Postman can call these URL if "php artisan serve" running and IP/address is same. Please see steps below
 ```
 ### Login
 ```bash
