@@ -1,7 +1,7 @@
 ## Basic API
 
-This is a basic api system that has custom auth api token(bearer) with expiry date (NO Sanctum or Passport). Has XSS stripping and Http Headers under the middleware. Using Service Pattern/Didn't create action for Quotes just made service for it. Also build error handler with job so any errors caught in try catch will email user.
-Unit feature testing is also been added for the 3 functions. Basic Caching added to Quotes. Using Laravel 10.
+This is a basic api system that has custom auth api token(bearer) with expiry date (NO Sanctum or Passport). Has XSS stripping and Http Headers under the middleware. Using Service Pattern. Also build error handler with job so any errors caught in try catch will email user.
+Have a helper for the json return responses. Unit feature testing is also been added for the 3 functions. Basic Caching added to Quotes. Using Laravel 10.
 
 ## Middleware added
 app\Http\Middleware\XssSanitization.php
@@ -23,14 +23,16 @@ app\Providers\AuthServiceProvider.php
 
 app\Services\AuthService.php
 
+app\Helpers\helpers.php
+
 composer.json -> added autoload helper function
 
 
 ## Steps to use the api from Testing to Postman
 ```bash
-Step 1 - git clone https://github.com/marcovie/
+Step 1 - git clone https://github.com/marcovie/laravel_10_basic_api_without_auth_package
 ```
-[https://github.com/marcovie/](https://github.com/marcovie/)
+[https://github.com/marcovie/laravel_10_basic_api_without_auth_package](https://github.com/marcovie/laravel_10_basic_api_without_auth_package)
 ```bash
 Step 2 - composer install
 
